@@ -6,10 +6,14 @@ import burgerButton from './burgerButton.png';
 export default function NavBar() {
 
   const [mostrar, setMostrar] = useState(false);
-  const [login, setLogin]=useState(false);
+  const [login, setLogin]=useState(true);
+
+
   const showNav=()=>{
     setMostrar(!mostrar)
 }
+
+
 const isLogin=()=>{
   setLogin(!login)
 }
@@ -27,6 +31,9 @@ const isLogin=()=>{
 
     <div >
   <div>
+{
+!login?(<></>):(
+
 
   <form className="d-flex" role="search" style={{marginBottom: "10px", Width:"350px"}}>
 
@@ -34,6 +41,8 @@ const isLogin=()=>{
   <box-icon name='search-alt-2' style={{marginLeft: "-35px",
   marginBottom: "-12px",marginTop: "7px"}}></box-icon>
   </form>
+)
+}
 
   </div>
   </div>
