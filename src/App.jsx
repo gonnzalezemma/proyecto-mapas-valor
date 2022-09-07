@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./components/Footer";
 import NavBar from "./components/NavBar"
 import Routing from "./routes/Routing"
 
@@ -7,7 +8,7 @@ export default function App() {
 <>
 <NavBar/>
 <Routing/>
-
+<Footer/>
 </>
   
   );

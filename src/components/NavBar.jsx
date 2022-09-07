@@ -23,7 +23,7 @@ const isLogin=()=>{
   <nav className="navbar" style={{backgroundColor: "#024554"}}>
     <div className="container" style={{maxWidth:"1900px", height: "45px" }}>
       <a className="navbar-brand" href="#"  >
-                <Link to="/" >
+                <Link to="/Home" >
                 <img src={Logo} alt="" width="60" height="50" />
 
                 </Link>
