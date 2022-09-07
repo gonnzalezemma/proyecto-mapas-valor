@@ -7,6 +7,7 @@ import imagen04 from "./images/04.jpg"
 
 const Home = () => {
   return (
+    /* heroes */
      <div className="container">
       <div className="row">
       <div className="col-md-">
@@ -26,6 +27,9 @@ const Home = () => {
     </div>
   </div>
         </div>
+
+        {/* carrusel */}
+
       <div className="col-md- mt-5">
           <div
             id="carouselExampleIndicators"
@@ -55,11 +59,11 @@ const Home = () => {
               ></button>
             </div>
             <div className="carousel-inner">
-              <div className="carousel-item active">
-              <Cards url = {imagen01}/>
+              <div className="carousel-item active" >
+              <Cards url = {imagen01} />
               </div>
               <div className="carousel-item">
-                <Cards url = {imagen02}/>
+                <Cards url = {imagen02}/> 
               </div>
               <div className="carousel-item">
               <Cards url = {imagen03}/>

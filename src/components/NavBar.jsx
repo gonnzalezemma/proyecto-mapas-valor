@@ -6,7 +6,7 @@ import burgerButton from './burgerButton.png';
 export default function NavBar() {
 
   const [mostrar, setMostrar] = useState(false);
-  const [login, setLogin]=useState(true);
+  const [login, setLogin]=useState(false);
 
 
   const showNav=()=>{
