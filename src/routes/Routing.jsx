@@ -12,7 +12,7 @@ import {
 export default function Routing() {
     return (
         <Routes>
-        <Route path='Home' element={<Home/>} />
+        <Route path='' element={<Home/>} />
         <Route path="Register" element={<Register />} />
         <Route path="Login" element={<Login />} />
         
