@@ -1,20 +1,26 @@
 import React from "react";
 import Cards from "../components/Cards";
+import Dibujo from "../components/Dibujo";
 import imagen01 from "./images/01.jpg";
 import imagen02 from "./images/02.jpg";
 import imagen03 from "./images/03.jpg";
 import imagen04 from "./images/04.jpg"
 
+
+
 const Home = () => {
+  
   return (
     /* heroes */
+    
      <div className="container">
       <div className="row">
       <div className="col-md-">
         <div className="container col-xxl-8 px-4 py-5">
     <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div className="col-10 col-sm-8 col-lg-6">
-        <img src={imagen04} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"/>
+        {/* <img src={imagen04} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"/> */}
+        <Dibujo/>
       </div>
       <div className="col-lg-6">
         <h1 className="display-5 fw-bold lh-1 mb-3">Responsive left-aligned hero with image</h1>
@@ -27,7 +33,7 @@ const Home = () => {
     </div>
   </div>
         </div>
-
+        
         {/* carrusel */}
 
       <div className="col-md- mt-5">
@@ -59,13 +65,13 @@ const Home = () => {
               ></button>
             </div>
             <div className="carousel-inner">
-              <div className="carousel-item active" >
+              <div data-bs-interval="2000" className="carousel-item active" >
               <Cards url = {imagen01} />
               </div>
-              <div className="carousel-item">
+              <div data-bs-interval="2000" className="carousel-item">
                 <Cards url = {imagen02}/> 
               </div>
-              <div className="carousel-item">
+              <div data-bs-interval="2000" className="carousel-item">
               <Cards url = {imagen03}/>
               </div>
             </div>
