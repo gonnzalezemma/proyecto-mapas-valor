@@ -5,8 +5,12 @@ import Carrusel from "../components/Carrusel";
 const Home = () => {
   return (
     <>
-      <Heroes tittle="ejemplo" paragraph="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora consectetur necessitatibus doloremque commodi quisquam, obcaecati suscipit eligendi! Itaque amet, exercitationem sequi consequatur, laboriosam, rem ipsa ullam et vitae perferendis reiciendis!"/>
-      <Carrusel/>
+      <Heroes
+        tittle="Obtenga datos directos con GeoFor"
+        subtitle="Sepa antes que nadie los datos mas relevantes de su campo"
+        paragraph="Con nosotros puede saber de forma rapida y precisa los datos mas relevantes de una parcela en particular como ser:"
+        />
+      <Carrusel />
     </>
   );
 };
