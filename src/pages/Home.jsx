@@ -4,7 +4,7 @@ import Dibujo from "../components/Dibujo";
 import imagen01 from "./images/01.jpg";
 import imagen02 from "./images/02.jpg";
 import imagen03 from "./images/03.jpg";
-import imagen04 from "./images/04.jpg"
+
 
 
 

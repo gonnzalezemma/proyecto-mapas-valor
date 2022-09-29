@@ -6,6 +6,7 @@ import Routing from "./routes/Routing"
 export default function App() {
   return (
 <>
+
 <NavBar/>
 <Routing/>
 <Footer/>

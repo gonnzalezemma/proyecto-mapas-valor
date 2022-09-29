@@ -21,7 +21,7 @@ export default function LoginComponent() {
      <p className="card-text text-center">Si no esta registrado <Link to="/Login" style={{color:'black', textDecoration:"underline"}}> Registrese aqui</Link>
    
      </p>
-     <button type="button align-content-center" class="btn btn-light">Iniciar Sesion</button>
+     <button type="button align-content-center" class="btn btn-light" > <Link to="/Inicio">Iniciar Sesion </Link></button>
    </div>
    </div>
  </div>

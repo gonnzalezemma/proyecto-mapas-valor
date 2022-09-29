@@ -7,7 +7,7 @@ import {
   import Register from "./Register";
   import Login from "./Login";
   import Home from "../pages/Home";
-
+  import Inicio from "../pages/Inicio";
 
 export default function Routing() {
     return (
@@ -15,6 +15,7 @@ export default function Routing() {
         <Route path='' element={<Home/>} />
         <Route path="Register" element={<Register />} />
         <Route path="Login" element={<Login />} />
+        <Route path="Inicio" element={<Inicio/>} />
         
         
       </Routes>
