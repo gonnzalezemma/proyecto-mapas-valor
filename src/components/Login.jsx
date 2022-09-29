@@ -18,7 +18,7 @@ export default function LoginComponent() {
      <h5>Contraseña</h5>
      <input className="form-control me-2" placeholder="Ingrese su contraseña" aria-label="Search"/>
    
-     <p className="card-text text-center">Si no esta registrado <Link to="/Login" style={{color:'black', textDecoration:"underline"}}> Registrese aqui</Link>
+     <p className="card-text text-center">Si no esta registrado <Link to="/Register" style={{color:'black', textDecoration:"underline"}}> Registrese aqui</Link>
    
      </p>
      <button type="button align-content-center" class="btn btn-light" > <Link to="/Inicio">Iniciar Sesion </Link></button>
