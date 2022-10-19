@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 //comentario..
 const Cards = (props) => {
@@ -8,10 +8,10 @@ const Cards = (props) => {
       <div className='card-body'>
         <h5 className='card-title'>{props.tittle}</h5>
         <p className='card-text'>{props.paragraph}</p>
-        {/*  <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p> */}
       </div>
     </div>
   );
 };
 
-export default Cards;
+
+export default Cards
