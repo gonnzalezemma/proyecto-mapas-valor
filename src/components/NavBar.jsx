@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import {Link} from 'react-router-dom'
-import Logo from './Logo.png';
-import burgerButton from './burgerButton.png';
+import Logo from '../images/Logo.png';
+import burgerButton from '../images/burgerButton.png';
 
 export default function NavBar() {
 

@@ -1,11 +1,11 @@
 import React from "react";
 
 
-import Cards from "../components/Cards";
+/* import Cards from "../components/Cards";
 import Dibujo from "../components/Dibujo";
 import imagen01 from "./images/01.jpg";
 import imagen02 from "./images/02.jpg";
-import imagen03 from "./images/03.jpg";
+import imagen03 from "./images/03.jpg"; */
 import Heroes from "../components/Heroes";
 import Carrusel from "../components/Carrusel";
 
