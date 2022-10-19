@@ -1,32 +1,56 @@
-import React from 'react';
-import {Link} from 'react-router-dom'
-
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function LoginComponent() {
-    return (
-      <>
-      <br />
- <div className="row justify-content-center align-items-center" >
-   <div className="col-auto card text-bg-dark p-0 text-center mb-5 " style={{maxWidth: "30rem"}}>
-   
-   <div className="card-body" style={{backgroundColor:"#024554"}}>
-     <h3 className="card-title text-center" >Registrar usuario</h3>
-   
-     <h5>Usuario</h5>
-     <input className="form-control me-2" placeholder="ingrese un nombre de usuario" aria-label="Search"/>
-   
-     <h5>Contraseña</h5>
-     <input className="form-control me-2" placeholder="Ingrese su contraseña" aria-label="Search"/>
-   
-     <p className="card-text text-center">Si no esta registrado <Link to="/Register" style={{color:'black', textDecoration:"underline"}}> Registrese aqui</Link>
-   
-     </p>
-     <button type="button align-content-center" class="btn btn-light" > <Link to="/Inicio">Iniciar Sesion </Link></button>
-   </div>
-   </div>
- </div>
-      </>
+  return (
+    <div className='container'>
+      <div className='row-lg-5 mt-5 d-flex justify-content-start '>
+        <div className='col-md-5 '>
+          <form>
+            <div
+              className='card text-white'
+              style={{ backgroundColor: "#024554", maxWidth: "30rem" }}
+            >
+              <div className='card-header border-white text-center'>
+                <h3 className='card-title text-center'>Registrar usuario</h3>
+              </div>
+              <div className='card-body'>
+                <div className='mb-3'>
+                  <h5 className='text-start'>Usuario</h5>
+                  <input
+                    className='form-control'
+                    placeholder='ingrese un nombre de usuario'
+                  />
+                </div>
 
-    );
-  }
-  
+                <div className='mb-3'>
+                  <h5 className='text-start'>Contraseña</h5>
+                  <input
+                    className='form-control'
+                    placeholder='Ingrese su contraseña'
+                  />
+                </div>
+
+                <p className='card-text text-center'>
+                  Si no esta registrado{" "}
+                  <Link to='/Register' style={{ color: "black" }}>
+                    {" "}
+                    Registrese aqui
+                  </Link>
+                </p>
+              </div>
+              <div className='card-footer text-end border-white'>
+                <Link to='/'>
+                  <button type='button' class='btn btn-light'>
+                    {" "}
+                    iniciar sesion
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+}
