@@ -34,7 +34,7 @@ export const NavLogged = () => {
         <NavDropdown.Divider color='white' />
         <NavDropdown.Item
           as={Link}
-          to='/login'
+          to='/'
           onClick={() => setLogin(!login)}
         >
           Cerrar sesion

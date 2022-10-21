@@ -17,7 +17,7 @@ export const NavNoLogged = () => {
         >
           Iniciar Sesion
         </Button>
-        <Button as={Link} to='/login'>
+        <Button as={Link} to='/register'>
           Registrarse
         </Button>
       </Navbar.Collapse>
