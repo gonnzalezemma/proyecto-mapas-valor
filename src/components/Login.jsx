@@ -35,7 +35,7 @@ export default function LoginComponent() {
                   Si no esta registrado{" "}
                   <Link to='/Register' style={{ color: "black" }}>
                     {" "}
-                    Registrese aqui asdfxzvzxvzxcvzxcvzxvzcvxv
+                    Registrese aqui prueba nueva
                   </Link>
                 </p>
               </div>
