@@ -1,7 +1,8 @@
 import React from "react";
-import { Button, Form, Navbar, NavDropdown } from "react-bootstrap";
+import { Button, Form, InputGroup, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useMaps } from "../../context/MapContext";
+import { FaSearch } from "react-icons/fa";
 
 export const NavLogged = () => {
   const { login, setLogin } = useMaps();
@@ -10,13 +11,17 @@ export const NavLogged = () => {
     <>
       <Navbar.Toggle aria-controls='basic-navbar-nav' />
       <Form className='d-flex'>
-        <Form.Control
-          type='search'
-          placeholder='Search'
-          className='me-2'
-          aria-label='Search'
-        />
-        <Button variant='success'>Search</Button>
+        <InputGroup>
+          <Form.Control
+            type='search'
+            placeholder='Search'
+            // className='me-2'
+            aria-label='Search'
+          />
+          <Button variant='success'>
+            <FaSearch className='mb-1' />
+          </Button>
+        </InputGroup>
       </Form>
       <NavDropdown
         menuVariant='dark'
@@ -24,7 +29,9 @@ export const NavLogged = () => {
         title='Más'
         className='text-white'
       >
-        <NavDropdown.Item href='#action/3.1'>Perfil</NavDropdown.Item>
+        <NavDropdown.Item as={Link} to='/perfil'>
+          Perfil
+        </NavDropdown.Item>
         <NavDropdown.Item href='#action/3.2'>
           Mapas descargados
         </NavDropdown.Item>
@@ -32,11 +39,7 @@ export const NavLogged = () => {
           Gestionar Ubicaciones
         </NavDropdown.Item>
         <NavDropdown.Divider color='white' />
-        <NavDropdown.Item
-          as={Link}
-          to='/'
-          onClick={() => setLogin(!login)}
-        >
+        <NavDropdown.Item as={Link} to='/' onClick={() => setLogin(!login)}>
           Cerrar sesion
         </NavDropdown.Item>
       </NavDropdown>
