@@ -1,24 +1,18 @@
-import React from 'react';
-//jorge branch
-import {
-    Routes,
-    Route,
-  } from "react-router-dom";
-  import Register from "./Register";
-  import Login from "./Login";
-  import Home from "../pages/Home";
-  import Inicio from "../pages/Inicio";
+import { Routes, Route } from "react-router-dom";
+import Home from "../pages/Home";
+import { NotFound } from "../pages/NotFound";
+import { Login } from "../pages/Login";
+import { Register } from "../pages/Register";
+import { Perfil } from "../pages/Perfil";
 
 export default function Routing() {
-    return (
-        <Routes>
-        <Route path='' element={<Home/>} />
-        <Route path="Register" element={<Register />} />
-        <Route path="Login" element={<Login />} />
-        <Route path="Inicio" element={<Inicio/>} />
-        
-        
-      </Routes>
-
-    );
-  }
+  return (
+    <Routes>
+      <Route path='' element={<Home />} />
+      <Route path='register' element={<Register />} />
+      <Route path='login' element={<Login />} />
+      <Route path='perfil' element={<Perfil />} />
+      <Route path='*' element={<NotFound />} />
+    </Routes>
+  );
+}

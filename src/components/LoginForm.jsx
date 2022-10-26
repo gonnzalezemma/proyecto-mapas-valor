@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function LoginComponent() {
+export const LoginForm = () => {
   return (
     <div className='container'>
-      <div className='row-lg-5 mt-5 d-flex justify-content-start '>
+      <div className='row-lg-5 mt-5 d-flex justify-content-center'>
         <div className='col-md-5 '>
           <form>
             <div
@@ -12,7 +12,7 @@ export default function LoginComponent() {
               style={{ backgroundColor: "#024554", maxWidth: "30rem" }}
             >
               <div className='card-header border-white text-center'>
-                <h3 className='card-title text-center'>Registrar usuario</h3>
+                <h3 className=' text-center'>Iniciar sesion</h3>
               </div>
               <div className='card-body'>
                 <div className='mb-3'>
@@ -41,7 +41,7 @@ export default function LoginComponent() {
               </div>
               <div className='card-footer text-end border-white'>
                 <Link to='/'>
-                  <button type='button' class='btn btn-light'>
+                  <button type='button' className='btn btn-light'>
                     {" "}
                     iniciar sesion
                   </button>
@@ -53,4 +53,4 @@ export default function LoginComponent() {
       </div>
     </div>
   );
-}
+};
