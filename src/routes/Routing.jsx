@@ -11,8 +11,8 @@ export default function Routing() {
       <Route path='' element={<Home />} />
       <Route path='register' element={<Register />} />
       <Route path='login' element={<Login />} />
-      <Route path='perfil' element={<Perfil />} />
       <Route path='*' element={<NotFound />} />
+      <Route path='perfil' element={<Perfil />} />
     </Routes>
   );
 }

@@ -35,7 +35,7 @@ export const LoginForm = () => {
                   Si no esta registrado{" "}
                   <Link to='/Register' style={{ color: "black" }}>
                     {" "}
-                    Registrese aqui
+                    Registrese aqui prueba nueva
                   </Link>
                 </p>
               </div>
