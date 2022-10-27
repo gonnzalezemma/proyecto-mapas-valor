@@ -32,7 +32,7 @@ export const NavLogged = () => {
         <NavDropdown.Item as={Link} to='/perfil'>
           Perfil
         </NavDropdown.Item>
-        <NavDropdown.Item href='#action/3.2'>
+        <NavDropdown.Item as={Link} to='/maps'>
           Mapas descargados
         </NavDropdown.Item>
         <NavDropdown.Item href='#action/3.3'>

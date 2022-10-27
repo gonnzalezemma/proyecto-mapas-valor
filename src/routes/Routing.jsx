@@ -4,6 +4,7 @@ import { NotFound } from "../pages/NotFound";
 import { Login } from "../pages/Login";
 import { Register } from "../pages/Register";
 import { Perfil } from "../pages/Perfil";
+import { Maps } from "../pages/Maps";
 
 export default function Routing() {
   return (
@@ -12,7 +13,10 @@ export default function Routing() {
       <Route path='register' element={<Register />} />
       <Route path='login' element={<Login />} />
       <Route path='*' element={<NotFound />} />
+
       <Route path='perfil' element={<Perfil />} />
+
+      <Route path='maps' element={<Maps />} />
     </Routes>
   );
 }
