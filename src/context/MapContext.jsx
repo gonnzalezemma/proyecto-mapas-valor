@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useRef, useState } from "react";
 
 const mapContext = createContext();
 
@@ -10,10 +10,15 @@ export const useMaps = () => {
 
 export const MapProvider = ({ children }) => {
   const [login, setLogin] = useState(false);
+  const [mapLayers, setMapLayers] = useState([]);
+  const mapRef = useRef();
 
   const values = {
     login,
     setLogin,
+    mapRef,
+    mapLayers,
+    setMapLayers,
   };
 
   return <mapContext.Provider value={values}>{children}</mapContext.Provider>;

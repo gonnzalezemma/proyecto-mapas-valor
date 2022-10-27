@@ -1,0 +1,10 @@
+.leaflet-container {
+  display: inline-table;
+  left: 8%;
+  width: 85%;
+  height: 93vh;
+}
+
+.sr-only {
+  display: none;
+}
