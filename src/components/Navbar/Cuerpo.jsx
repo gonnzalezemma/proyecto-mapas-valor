@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../assets/Logo.png";
 import { MDBCol, MDBRow } from "mdb-react-ui-kit";
 import Container from "react-bootstrap/Container";
+import { Link } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
@@ -12,9 +13,9 @@ export const Cuerpo = ({ weather }) => {
         <div style={{ display: "flex" }} className="text-white">
           <Row>
             <Col sm={4}>
-              <img src={Logo} width={60} height={50} alt="logo" />
+            <Link to=''><img src={Logo} width={60} height={50} alt="logo" /></Link>
             </Col>
-            <Col sm={4}>
+            <Col sm={4} >
               <img src={weather?.current.condition.icon} />
               <p>{weather?.location.name}</p>
             </Col>
