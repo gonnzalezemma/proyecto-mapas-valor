@@ -18,6 +18,8 @@ export default function Routing() {
       <Route path='login' element={<Login />} />
       <Route path='*' element={<NotFound />} />
       <Route path='perfil' element={<Perfil />} />
+      <Route path='news' element={<News />} />
+
     </Routes>
   );
 }
