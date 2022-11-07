@@ -8,6 +8,7 @@ import { Perfil } from "../pages/Perfil";
 import { HeatMap } from "../pages/heatMap"; */
 import { PointMap } from "../pages/PointMap";
 
+import News from "../pages/news";
 
 export default function Routing() {
   return (
@@ -17,7 +18,6 @@ export default function Routing() {
       <Route path='login' element={<Login />} />
       <Route path='*' element={<NotFound />} />
       <Route path='perfil' element={<Perfil />} />
-      <Route path='maps' element={<PointMap />} />
     </Routes>
   );
 }
