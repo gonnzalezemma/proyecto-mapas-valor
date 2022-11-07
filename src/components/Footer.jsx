@@ -16,6 +16,9 @@ const Footer = () => {
           <div className='col-auto'>
             <Link to='Login'>Login</Link>
           </div>
+          <div className='col-auto'>
+            <Link to='News'>News</Link>
+          </div>
         </div>
         <p className='text-center text-muted'>&copy; 2022 Company, Inc</p>
       </footer>
