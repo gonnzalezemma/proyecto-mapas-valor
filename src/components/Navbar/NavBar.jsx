@@ -9,11 +9,13 @@ export default function NavBar() {
   const { login } = useMaps();
 
   return (
-    <>      
-    <Navbar style={{ backgroundColor: "#024554" }} variant="dark">
-                <CurrentWeather />
-            {login ? <NavLogged /> : <NavNoLogged />}
-    </Navbar>
+    <>
+      <Navbar style={{ backgroundColor: "#024554" }} variant="dark">
+     <div>  
+       <CurrentWeather /> 
+     </div>
+        {login ? <NavLogged /> : <NavNoLogged />}
+      </Navbar>
     </>
   );
 }

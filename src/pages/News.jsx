@@ -8,7 +8,7 @@ const News = () => {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "",
+        "X-RapidAPI-Key":`${import.meta.env.VITE_KEYNEWS}`,
         "X-RapidAPI-Host": "newscatcher.p.rapidapi.com",
       },
     };

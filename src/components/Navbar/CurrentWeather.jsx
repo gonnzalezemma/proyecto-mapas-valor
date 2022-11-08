@@ -7,7 +7,7 @@ const CurrentWeather = () => {
   const [weather, setWeather] = useState(null);
   const loadInfo = async (city='Formosa') => {
     try {
-      const req = await fetch(`http://api.weatherapi.com/v1/current.json?key=${process.env.keys}=${city}&aqi=yes&lang=es`);
+      const req = await fetch(`http://api.weatherapi.com/v1/current.json?key=${import.meta.env.VITE_KEYS}&q=${city}&aqi=yes&lang=es`);
       const resJson = await req.json();
 
       setTimeout(() => {
