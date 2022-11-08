@@ -31,18 +31,18 @@ const News = () => {
     <>
       <h1>Noticias sobre el agro</h1>
       <h3>seccion de moda</h3>
-      <div class="album py-5 bg-light">
-        <div class="container">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div className="album py-5 bg-light">
+        <div className="container">
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             {news ? (
               news.map((element) => (
-                <div class="col">
-                  <div class="card shadow-sm">
+                <div className="col">
+                  <div className="card shadow-sm">
                     <a href={element.link} target="_blank">
                       <img
                         src={element.media}
                         alt=""
-                        class="bd-placeholder-img card-img-top"
+                        className="bd-placeholder-img card-img-top"
                         width="100%"
                         height="225"
                         xmlns=""
@@ -52,11 +52,11 @@ const News = () => {
                         focusable="false"
                       />
                     </a>
-                    <div class="card-body">
+                    <div className="card-body">
                       <h3>{element.clean_url}</h3>
-                      <p class="card-text">{element.title}</p>
-                      <div class="d-flex justify-content-between align-items-center">
-                        <small class="text-muted">
+                      <p className="card-text">{element.title}</p>
+                      <div className="d-flex justify-content-between align-items-center">
+                        <small className="text-muted">
                           {element.published_date.slice(0, 10)}
                         </small>
                       </div>
