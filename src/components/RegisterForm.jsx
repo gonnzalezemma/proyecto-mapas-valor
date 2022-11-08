@@ -43,11 +43,11 @@ export const RegisterForm = () => {
               <p className='card-text text-center'>
                 Si ya esta registrado{" "}
                 <Link
-                  to='/Register'
+                  to='/Login'
                   style={{ color: "black", textDecoration: "underline" }}
                 >
                   {" "}
-                  Inicie session aqui
+                  Inicie sesion aqui
                 </Link>
               </p>
               <button type='button align-content-center' class='btn btn-light'>

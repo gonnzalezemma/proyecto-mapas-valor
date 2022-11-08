@@ -1,6 +1,7 @@
 import React from "react";
 import Heroes from "../components/Heroes";
 import Carrusel from "../components/Carrusel";
+import News from "./news";
 
 const Home = () => {
   return (

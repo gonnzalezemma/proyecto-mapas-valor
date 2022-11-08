@@ -11,10 +11,13 @@ const Footer = () => {
             <Link to=''>Home</Link>
           </div>
           <div className='col-auto'>
-            <Link to='Register'>Contact</Link>
+            <Link to='Register'>Registro</Link>
           </div>
           <div className='col-auto'>
-            <Link to='Login'>About</Link>
+            <Link to='Login'>Login</Link>
+          </div>
+          <div className='col-auto'>
+            <Link to='News'>News</Link>
           </div>
         </div>
         <p className='text-center text-muted'>&copy; 2022 Company, Inc</p>
