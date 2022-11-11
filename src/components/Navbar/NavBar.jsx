@@ -10,7 +10,7 @@ export default function NavBar() {
 
   return (
     <>
-      <Navbar style={{ backgroundColor: "#024554" }} variant="dark">
+      <Navbar style={{ backgroundColor: "#024554", display:"flex", flexDirection:"row", justifyContent:"center", justifyItems:"center", padding:"20px 20px 0px 5px"}} variant="dark">
      <div>  
        <CurrentWeather /> 
      </div>
