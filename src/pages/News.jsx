@@ -1,6 +1,7 @@
 import React from "react";
 import { Loading } from "../components/Navbar/Loading";
 import { useState, useEffect } from "react";
+import CuerpoNews from "../components/CuerpoNews";
 
 const News = () => {
   const [news, setNews] = useState([]);
@@ -8,7 +9,7 @@ const News = () => {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key":`${import.meta.env.VITE_KEYNEWS}`,
+        "X-RapidAPI-Key": `${import.meta.env.VITE_KEYNEWS}`,
         "X-RapidAPI-Host": "newscatcher.p.rapidapi.com",
       },
     };
@@ -30,37 +31,18 @@ const News = () => {
   return (
     <>
       <h1>Noticias sobre el agro</h1>
-      <h3>seccion de moda</h3>
       <div className="album py-5 bg-light">
         <div className="container">
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             {news ? (
               news.map((element) => (
-                <div className="col">
-                  <div className="card shadow-sm">
-                    <a href={element.link} target="_blank">
-                      <img
-                        src={element.media}
-                        alt=""
-                        className="bd-placeholder-img card-img-top"
-                        width="100%"
-                        height="225"
-                        xmlns=""
-                        role="img"
-                        aria-label="Placeholder: Thumbnail"
-                        preserveAspectRatio="xMidYMid slice"
-                        focusable="false"
-                      />
-                    </a>
-                    <div className="card-body">
-                      <h3>{element.clean_url}</h3>
-                      <p className="card-text">{element.title}</p>
-                      <div className="d-flex justify-content-between align-items-center">
-                        <small className="text-muted">
-                          {element.published_date.slice(0, 10)}
-                        </small>
+                <div>
+                  <div>
+                    <div className="col">
+                      <div className="card shadow-sm">
+                        <CuerpoNews titleN={element.title} summary={element.summary} media={element.media} clean_url={element.clean_url} titleM={element.title} published_date={element.published_date}/>
                       </div>
-                    </div>
+                    </div>                     
                   </div>
                 </div>
               ))
