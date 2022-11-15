@@ -34,8 +34,22 @@ const EjemploModal = (props) => {
       </a>
 
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title><h2>{props.titleM}</h2></Modal.Title>
+        <Modal.Header style={{padding:"1px 1px 1px 1px"}}>
+          <Modal.Title>
+          <img
+          src={props.media}
+          alt=""
+          className="bd-placeholder-img card-img-top"
+          width="100%"
+          height="225"
+          xmlns=""
+          role="img"
+          aria-label="Placeholder: Thumbnail"
+          preserveAspectRatio="xMidYMid slice"
+          focusable="false"
+        />
+            <h2>{props.titleM}</h2>
+            </Modal.Title>
         </Modal.Header>
         <Modal.Body><b>{props.summary}</b></Modal.Body>
       </Modal>
