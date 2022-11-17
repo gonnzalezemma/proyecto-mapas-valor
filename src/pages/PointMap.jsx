@@ -64,6 +64,10 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import "leaflet-regular-grid-cluster";
 import "leaflet-easybutton";
+import "leaflet-draw";
+
+
+
 
 
 const purpleOptions = { color: "purple", fillOpacity: 0 };
@@ -120,15 +124,15 @@ export function PointMap() {
 
   const mapStyles = {
     overflow: "hidden",
-    width: "100%",
-    height: "100vh",
+    width: "900px",
+    height: "90vh",
   };
 
   // Options for our map instance:
   const mapParams = {
     center: [-26.176143991875357, -58.202510798884646], 
     zoom: 30,
-    zoomControl: false,
+    zoomControl: true,
     zoomSnap: 0.75,
     maxBounds: L.latLngBounds(L.latLng(-150, -240), L.latLng(150, 240)),
     closePopupOnClick: false,
@@ -138,17 +142,7 @@ export function PointMap() {
   // Map creation:
   useEffect(() => {
     mapRef.current = L.map("map", mapParams);
-    var myIcon = L.icon({
-      iconUrl: '../components/assets/Logo.png',
-      iconSize: [38, 95],
-      iconAnchor: [22, 94],
-      popupAnchor: [-3, -76],
-      shadowUrl: '../components/assets/Logo.png',
-      shadowSize: [68, 95],
-      shadowAnchor: [22, 94]
-  });
- 
-    L.polygon(multiPolygon, purpleOptions,{icon: myIcon}).addTo(mapRef.current);
+
 
     // Set map instance to state:
     setMapInstance(mapRef.current);
@@ -159,7 +153,42 @@ export function PointMap() {
     
     if (!mapInstance) return;
     if (mapInstance) {
-    
+
+/*       var no = L.tileLayer.wms("http://localhost:9091/geoserver/proyecto-mapas-valor/wms?service=WMS&", {
+        layers: "proyecto-mapas-valor:polygon_tables",//nombre de la capa (ver get capabilities)
+        format: 'image/png',
+        transparent: false,
+        version: '1.1.0',//wms version (ver get capabilities)
+        attribution: "GeoDatas-Instituto politecnico Formosa",
+        opacity: 0.6
+     })
+     mapInstance.addLayer(no); */
+
+   
+      
+
+/* 
+?
+? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+
+
+
+
       var stateChangingButton = L.easyButton({
         states: [
           {
@@ -419,6 +448,7 @@ export function PointMap() {
       </Modal>
 
       <div id="map" style={mapStyles} />
+   
     </>
   );
 }
