@@ -83,11 +83,21 @@ console.log(L.layerGroup([definirPuntosMapa]))
 
 
    if(container){ var map = L.map("map").setView([-26.181248, -58.208816], 12);
-
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution:
         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(map);
+
+    var no = L.tileLayer.wms("http://localhost:9091/geoserver/proyecto-mapas-valor/wms", {
+      layers: "proyecto-mapas-valor:polygon_tables",//nombre de la capa (ver get capabilities)
+      format: 'image/jpeg',
+      transparent: true,
+      version: '1.1.0',//wms version (ver get capabilities)
+      attribution: "GeoDatas-Instituto politecnico Formosa",
+      opacity: 1
+   })
+   map.addLayer(no);
+
 
 
 

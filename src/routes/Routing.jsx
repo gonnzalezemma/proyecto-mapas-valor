@@ -4,9 +4,10 @@ import { NotFound } from "../pages/NotFound";
 import { Login } from "../pages/Login";
 import { Register } from "../pages/Register";
 import { Perfil } from "../pages/Perfil";
-/* import { SplitMaps } from "../pages/PointMap";
-import { HeatMap } from "../pages/heatMap"; */
+/* import { SplitMaps } from "../pages/PointMap";*/
+import { HeatMap } from "../pages/heatMap"; 
 import { PointMap } from "../pages/PointMap";
+import  Mapstore from "../pages/Mapstore";
 
 import News from "../pages/news";
 
@@ -18,7 +19,10 @@ export default function Routing() {
       <Route path='login' element={<Login />} />
       <Route path='*' element={<NotFound />} />
       <Route path='perfil' element={<Perfil />} />
+
       <Route path='news' element={<News />} />
+
+      <Route path='maps' element={<Mapstore />} />
 
     </Routes>
   );
