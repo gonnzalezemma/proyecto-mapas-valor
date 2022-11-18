@@ -19,6 +19,8 @@ export default function Routing() {
       <Route path='*' element={<NotFound />} />
       <Route path='perfil' element={<Perfil />} />
       <Route path='maps' element={<Mapstore />} />
+      <Route path='gestion' element={<PointMap />} />
+
     </Routes>
   );
 }
