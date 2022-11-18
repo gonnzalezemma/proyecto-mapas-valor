@@ -24,6 +24,9 @@ export default function Routing() {
 
       <Route path='maps' element={<Mapstore />} />
 
+      <Route path='gestion' element={<PointMap />} />
+
+
     </Routes>
   );
 }
