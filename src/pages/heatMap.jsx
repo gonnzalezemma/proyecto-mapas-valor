@@ -1,14 +1,6 @@
-/* import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import { Layers_control } from "../components/mapas/Layers_control";
-import { LocationMarker } from "../components/mapas/LocationMarker";
-import { MapDraw } from "../components/mapas/MapDraw";
-import { MiniMapControl } from "../components/mapas/MiniMapControl";
-import { useMaps } from "../context/MapContext"; */
 
 const addressPoints = [];
 
-/* import "../css/maps.css";
-import "leaflet.heat"; */
 import React, { useEffect, useState, useRef} from "react";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
@@ -98,15 +90,6 @@ console.log(L.layerGroup([definirPuntosMapa]))
    })
    map.addLayer(no);
 
-
-
-
-
-
-
-
-
-
    
     var stateChangingButton = L.easyButton({
       states:  [{
@@ -130,11 +113,7 @@ console.log(L.layerGroup([definirPuntosMapa]))
             title:     'delete',
            
             onClick: function(btn, map) {
-          /*     */
-          //L.layerGroup.removeLayer()
-         // L.layerGroup(/* definirPuntosMapa */).removeLayer
-           //     handleRemove(map)
-           /* L.remove(); */
+
            map.eachLayer(function (layer) {
 
 

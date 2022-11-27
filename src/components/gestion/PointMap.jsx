@@ -67,9 +67,6 @@ import "leaflet-easybutton";
 import "leaflet-draw";
 
 
-
-
-
 const purpleOptions = { color: "purple", fillOpacity: 0 };
 
 export function PointMap() {
@@ -123,9 +120,7 @@ export function PointMap() {
   );
 
   const mapStyles = {
-    overflow: "hidden",
-    width: "900px",
-    height: "90vh",
+    
   };
 
   // Options for our map instance:
@@ -153,41 +148,6 @@ export function PointMap() {
     
     if (!mapInstance) return;
     if (mapInstance) {
-
-/*       var no = L.tileLayer.wms("http://localhost:9091/geoserver/proyecto-mapas-valor/wms?service=WMS&", {
-        layers: "proyecto-mapas-valor:polygon_tables",//nombre de la capa (ver get capabilities)
-        format: 'image/png',
-        transparent: false,
-        version: '1.1.0',//wms version (ver get capabilities)
-        attribution: "GeoDatas-Instituto politecnico Formosa",
-        opacity: 0.6
-     })
-     mapInstance.addLayer(no); */
-
-   
-      
-
-/* 
-?
-? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-? aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
-
-
-
 
       var stateChangingButton = L.easyButton({
         states: [
@@ -447,7 +407,7 @@ export function PointMap() {
         </Modal.Footer>
       </Modal>
 
-      <div id="map" style={mapStyles} />
+      <div id="map" style={{border: "none", display:"inline-table", height:"85vh", width:"100%"}} />
    
     </>
   );

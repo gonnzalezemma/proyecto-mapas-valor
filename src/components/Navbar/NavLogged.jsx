@@ -35,10 +35,13 @@ export const NavLogged = () => {
             Perfil
           </NavDropdown.Item>
           <NavDropdown.Item as={Link} to='/maps'>
-            Mapas descargados
+           Mapas
           </NavDropdown.Item>
-          <NavDropdown.Item href='#action/3.3'>
-            Gestionar Ubicaciones
+          <NavDropdown.Item as={Link} to='/gestion'>
+            Gestionar parcela
+          </NavDropdown.Item>
+          <NavDropdown.Item href='/news'>
+            Noticias
           </NavDropdown.Item>
           <NavDropdown.Divider color='white' />
           <NavDropdown.Item as={Link} to='/' onClick={() => setLogin(!login)}>

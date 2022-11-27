@@ -36,7 +36,7 @@ const CurrentWeather = () => {
 
   return (
     <>      {
-           weather? <Cuerpo weather={weather}/> : <Loading />
+           weather? <Cuerpo weather={weather}/> : <div></div>
     }
     </>
   );

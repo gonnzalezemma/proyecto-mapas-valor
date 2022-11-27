@@ -1,0 +1,12 @@
+@media screen and (max-width: 120px){ 
+   
+    .watter{ padding-left:"50px";
+    padding-top :"-20px"; 
+    margin-top: "-2px";}
+}
+@media screen and (max-width: 900px){ 
+   
+    .watter{ padding-left:"550px";
+    padding-top :"-50px"; 
+    margin-top: "-62px";}
+}
