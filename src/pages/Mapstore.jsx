@@ -1,6 +1,8 @@
 import React from 'react'
 import { Container, Navbar,Nav, Col, Row,Card, Button, } from "react-bootstrap";
 import { Link } from "react-router-dom";
+
+
 import imageMapValor from "../components/mapstore/images/terminado-mapa-valor.png"
 import imagePrecio from "../components/mapstore/images/precios-terminado.png"
 function Mapstore() {
@@ -9,7 +11,11 @@ function Mapstore() {
     <>
 
 <br />
-      <Card  as={Link} to='/maps/humedad' style={{ width: '18rem' }} >
+
+<Row xs={1} xl={4} md={2} className="g-4" >
+<Col>
+
+      <Card  as={Link} to='/maps/humedad' style={{ width: '20rem' }} >
       <Card.Img variant="top" src={imageMapValor} style={{ textDecoration:"none"}} />
       <Card.Body>
         <Card.Title>Humedad Suelo</Card.Title>
@@ -21,8 +27,10 @@ function Mapstore() {
         </Card.Text>
       </Card.Body>
     </Card>
+</Col>
+<Col>
 
-    <Card  as={Link} to='/maps/precio-campos' style={{ width: '18rem' }} >
+    <Card  as={Link} to='/maps/precio-campos' style={{ width: '20rem' }} >
       <Card.Img variant="top" src={imagePrecio} style={{ textDecoration:"none"}} />
       <Card.Body>
         <Card.Title>Precio promedio de hectareas</Card.Title>
@@ -33,8 +41,10 @@ function Mapstore() {
         </Card.Text>
       </Card.Body>
     </Card>
+</Col>
 
-    <Card  as={Link} to='/maps/departametos-temperatura-tierra' style={{ width: '18rem' }} >
+<Col>
+    <Card  as={Link} to='/maps/departametos-temperatura-tierra' style={{ width: '20rem' }} >
       <Card.Img variant="top" src={imageMapValor} style={{ textDecoration:"none"}} />
       <Card.Body>
         <Card.Title>Temperatura Tierra Formosa</Card.Title>
@@ -46,8 +56,10 @@ function Mapstore() {
         </Card.Text>
       </Card.Body>
     </Card>
+</Col>
 
-    <Card  as={Link} to='/maps/humedad' style={{ width: '18rem' }} >
+<Col>
+    <Card  as={Link} to='/maps/humedad' style={{ width: '20rem' }} >
       <Card.Img variant="top" src={imageMapValor} style={{ textDecoration:"none"}} />
       <Card.Body>
         <Card.Title>Humedad Suelo</Card.Title>
@@ -59,8 +71,10 @@ function Mapstore() {
         </Card.Text>
       </Card.Body>
     </Card>
+</Col>
 
-    <Card  as={Link} to='/maps/humedad' style={{ width: '18rem' }} >
+<Col>
+    <Card  as={Link} to='/maps/humedad' style={{ width: '20rem' }} >
       <Card.Img variant="top" src={imageMapValor} style={{ textDecoration:"none"}} />
       <Card.Body>
         <Card.Title>Humedad Suelo</Card.Title>
@@ -72,6 +86,15 @@ function Mapstore() {
         </Card.Text>
       </Card.Body>
     </Card>
+</Col>
+
+
+
+
+
+
+
+</Row>
 
 
 

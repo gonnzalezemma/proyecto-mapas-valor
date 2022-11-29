@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import crearparcela from '../gestionImage/crearparcela.png'
 import { Link } from "react-router-dom";
  const SeccionParcelas = ()=>{
 
@@ -12,7 +13,7 @@ import { Link } from "react-router-dom";
 
 
         <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Img variant="top" src={crearparcela}  style={{width: "100%"}}/>
       <Card.Body>
         <Card.Title>Crear Parcela</Card.Title>
         <Card.Text>
