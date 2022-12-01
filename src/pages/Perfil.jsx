@@ -129,8 +129,8 @@ export const Perfil = () => {
             className='m-3'
             variant='success'
             animated
-            label={`${60}%`}
-            now={50}
+            label={`${100}%`}
+            now={90}
           />
         </Card.Footer>
       </Card>

@@ -10,9 +10,16 @@ logs
 
 node_modules
 bower_components
+.env
 
 *.sublime*
 
 psd
 thumb
 sketch
+pnpm-lock.yaml
+
+yarn.lock
+
+.ENV
+
