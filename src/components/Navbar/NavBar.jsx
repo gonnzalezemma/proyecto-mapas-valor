@@ -6,8 +6,8 @@ import Logo from "../assets/Logo.png";
 import { Link } from "react-router-dom";
 
 export default function NavBar() {
-  const { login } = useMaps();
-
+  const { token } = useMaps();
+console.log(token);
   return (
     <Navbar style={{ backgroundColor: "#024554" }} variant='dark' expand='lg'>
       <Container>
@@ -16,7 +16,7 @@ export default function NavBar() {
             <img src={Logo} width='70' alt='logo' />
           </Navbar.Brand>
         </Link>
-        {login ? <NavLogged /> : <NavNoLogged />}
+        {token ? <NavLogged /> : <NavNoLogged />}
       </Container>
     </Navbar>
   );

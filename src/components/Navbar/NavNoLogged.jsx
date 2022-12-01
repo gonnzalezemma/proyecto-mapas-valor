@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button, Navbar } from "react-bootstrap";
-import { useMaps } from "../../context/MapContext";
 
 export const NavNoLogged = () => {
-  const { login, setLogin } = useMaps();
   return (
     <>
       <Navbar.Toggle aria-controls='basic-navbar-nav' />
@@ -11,7 +9,6 @@ export const NavNoLogged = () => {
         <Button
           as={Link}
           to='/login'
-          onClick={() => setLogin(!login)}
           className='mx-2'
           variant='success'
         >

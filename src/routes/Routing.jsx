@@ -5,6 +5,7 @@ import { Login } from "../pages/Login";
 import { Register } from "../pages/Register";
 import { Perfil } from "../pages/Perfil";
 import { Maps } from "../pages/Maps";
+import { ProfileForm } from "../components/forms/ProfileForm";
 
 export default function Routing() {
   return (
@@ -13,8 +14,9 @@ export default function Routing() {
       <Route path='register' element={<Register />} />
       <Route path='login' element={<Login />} />
       <Route path='perfil' element={<Perfil />} />
-      <Route path='*' element={<NotFound />} />
       <Route path='maps' element={<Maps />} />
+      <Route path='/profile-form' element={<ProfileForm />} />
+      <Route path='*' element={<NotFound />} />
     </Routes>
   );
 }

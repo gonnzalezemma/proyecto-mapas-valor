@@ -5,7 +5,7 @@ import { useMaps } from "../../context/MapContext";
 import { FaSearch } from "react-icons/fa";
 
 export const NavLogged = () => {
-  const { login, setLogin } = useMaps();
+  const { login, setLogin, Logout } = useMaps();
 
   return (
     <>
@@ -39,9 +39,12 @@ export const NavLogged = () => {
           Gestionar Ubicaciones
         </NavDropdown.Item>
         <NavDropdown.Divider color='white' />
-        <NavDropdown.Item as={Link} to='/' onClick={() => setLogin(!login)}>
+        <NavDropdown.Item as={Link} to='/' onClick={() => Logout()}>
           Cerrar sesion
         </NavDropdown.Item>
+        {/* <NavDropdown.Item as={Link} to='/' onClick={() => setLogin(!login)}>
+          Cerrar sesion
+        </NavDropdown.Item> */}
       </NavDropdown>
     </>
   );

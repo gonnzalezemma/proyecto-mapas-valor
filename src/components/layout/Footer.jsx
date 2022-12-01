@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className='container'>
+    <div className=''>
       {" "}
-      <footer className='py-3 my-4 mt-5'>
-        <div className='row justify-content-center border-bottom pb-3 mb-3'>
+      <footer className='py-4 bg-dark'>
+        <div className='row justify-content-center border-bottom'>
           <div className='col-auto'>
             <Link to=''>Home</Link>
           </div>
