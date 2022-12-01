@@ -15,7 +15,7 @@ function Mapstore() {
 <Row xs={1} xl={4} md={2} className="g-4" >
 <Col>
 
-      <Card  as={Link} to='/maps/humedad' style={{ width: '20rem' }} >
+      <Card  as={Link} to='/maps/humedad' style={{ width: '20rem', height: "25em" }} >
       <Card.Img variant="top" src={imageMapValor} style={{ textDecoration:"none"}} />
       <Card.Body>
         <Card.Title>Humedad Suelo</Card.Title>
@@ -30,7 +30,7 @@ function Mapstore() {
 </Col>
 <Col>
 
-    <Card  as={Link} to='/maps/precio-campos' style={{ width: '20rem' }} >
+    <Card  as={Link} to='/maps/precio-campos' style={{ width: '20rem', height: "25em" }} >
       <Card.Img variant="top" src={imagePrecio} style={{ textDecoration:"none"}} />
       <Card.Body>
         <Card.Title>Precio promedio de hectareas</Card.Title>
@@ -44,7 +44,7 @@ function Mapstore() {
 </Col>
 
 <Col>
-    <Card  as={Link} to='/maps/departametos-temperatura-tierra' style={{ width: '20rem' }} >
+    <Card  as={Link} to='/maps/departametos-temperatura-tierra' style={{ width: '20rem', height: "25em" }} >
       <Card.Img variant="top" src={imageMapValor} style={{ textDecoration:"none"}} />
       <Card.Body>
         <Card.Title>Temperatura Tierra Formosa</Card.Title>
@@ -59,7 +59,7 @@ function Mapstore() {
 </Col>
 
 <Col>
-    <Card  as={Link} to='/maps/humedad' style={{ width: '20rem' }} >
+    <Card  as={Link} to='/maps/humedad' style={{ width: '20rem', height: "25em" }} >
       <Card.Img variant="top" src={imageMapValor} style={{ textDecoration:"none"}} />
       <Card.Body>
         <Card.Title>Humedad Suelo</Card.Title>
@@ -74,7 +74,7 @@ function Mapstore() {
 </Col>
 
 <Col>
-    <Card  as={Link} to='/maps/humedad' style={{ width: '20rem' }} >
+    <Card  as={Link} to='/maps/humedad' style={{ width: '20rem', height: "25em" }} >
       <Card.Img variant="top" src={imageMapValor} style={{ textDecoration:"none"}} />
       <Card.Body>
         <Card.Title>Humedad Suelo</Card.Title>

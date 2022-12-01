@@ -50,7 +50,7 @@ export const RegisterForm = () => {
                   Inicie sesion aqui
                 </Link>
               </p>
-              <button type='button align-content-center' class='btn btn-light'>
+              <button type='button align-content-center' className='btn btn-light'>
                 Registrarme
               </button>
             </div>

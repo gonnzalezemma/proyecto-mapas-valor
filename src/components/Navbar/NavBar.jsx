@@ -1,7 +1,7 @@
 import { Container, Navbar, Col, Row } from "react-bootstrap";
 
 import { useState,useEffect } from "react";
-import { useMaps } from "../../context/MapContext";
+/* import { useMaps } from "../../context/MapContext"; */
 import { NavLogged } from "./NavLogged";
 import { NavNoLogged } from "./NavNoLogged";
 import { Link } from "react-router-dom";
@@ -10,7 +10,8 @@ import Logo from "../assets/Logo.png";
 
 
 export default function NavBar() {
-  const { login } = useMaps();
+ /*  const { login } = useMaps(); */
+ const login = true
   const [style,setStyle] = useState({});
 
 

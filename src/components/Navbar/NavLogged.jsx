@@ -1,11 +1,11 @@
 import React from "react";
 import { Button, Form, InputGroup, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { useMaps } from "../../context/MapContext";
+/* import { useMaps } from "../../context/MapContext"; */
 import { FaSearch } from "react-icons/fa";
 
 export const NavLogged = () => {
-  const { login, setLogin } = useMaps();
+/*   const { login, setLogin } = useMaps(); */
 
   return (
     <>

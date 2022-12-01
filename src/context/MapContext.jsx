@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useRef, useState } from "react";
+/* import React, { createContext, useContext, useRef, useState } from "react";
 
 const mapContext = createContext();
 
@@ -23,3 +23,4 @@ export const MapProvider = ({ children }) => {
 
   return <mapContext.Provider value={values}>{children}</mapContext.Provider>;
 };
+ */

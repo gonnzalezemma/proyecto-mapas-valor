@@ -1,15 +1,20 @@
 import React from "react";
 import Footer from "./components/Footer";
 import NavBar from "./components/Navbar/NavBar";
-import { MapProvider } from "./context/MapContext";
+import { Provider } from "react-redux";
+import store from "./store";
+/* import { MapProvider } from "./context/MapContext"; */
 import Routing from "./routes/Routing";
 
 export default function App() {
   return (
-    <MapProvider>
-      <NavBar />
-      <Routing />
-      <Footer />
-    </MapProvider>
+<Provider store={store}>
+
+
+  <NavBar />
+  <Routing />
+  <Footer />
+</Provider>
+
   );
 }
