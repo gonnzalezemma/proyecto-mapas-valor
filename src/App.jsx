@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import NavBar from "./components/Navbar/NavBar";
 import { MapProvider } from "./context/MapContext";
 import Routing from "./routes/Routing";
@@ -9,7 +9,6 @@ export default function App() {
     <MapProvider>
       <NavBar />
       <Routing />
-      <Footer />
     </MapProvider>
   );
 }

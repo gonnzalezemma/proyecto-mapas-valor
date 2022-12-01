@@ -1,19 +1,8 @@
 import React from "react";
-import {
-  Container,
-  Card,
-  Form,
-  Row,
-  Col,
-  Button,
-  ProgressBar,
-} from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export const Perfil = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
   return (
     <Container>
       <Card className='mt-5' border='black'>

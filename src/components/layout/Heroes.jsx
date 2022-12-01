@@ -1,6 +1,7 @@
 import React from "react";
-import mapa from "../pages/images/mapa.png";
-import Listas from "./listas";
+import Listas from "./Listas";
+import mapa from "../../pages/images/mapa.png";
+
 
 const Heroes = (props) => {
   return (
