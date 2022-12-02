@@ -8,10 +8,10 @@ import {
   ProgressBar,
   Button,
 } from "react-bootstrap";
-import { useMaps } from "../../context/MapContext";
+/* import { useMaps } from "../../context/MapContext"; */
 
 export const ProfileForm = () => {
-  const { RegProfile } = useMaps();
+/*   const { RegProfile } = useMaps(); */
   const data = {
     nombre: "",
     apellido: "",

@@ -64,7 +64,7 @@ useEffect(() => {
    
       
       </Row>
-        {login ? <NavLogged /> : <NavNoLogged />}
+        {isLoggedIn ? <NavLogged /> : <NavNoLogged />}
       </Navbar>
     </>
   );

@@ -2,10 +2,10 @@ import * as yup from "yup";
 import React, { useState } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { useNavigate, Link } from "react-router-dom";
-import { useMaps } from "../../context/MapContext";
+/* import { useMaps } from "../../context/MapContext"; */
 
 export const LoginForm = () => {
-  const { LoginUser, login, setLogin } = useMaps();
+/*   const { LoginUser, login, setLogin } = useMaps(); */
   const [data, setData] = useState({
     email: "",
     password: "",

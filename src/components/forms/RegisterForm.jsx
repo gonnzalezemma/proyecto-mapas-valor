@@ -3,10 +3,10 @@ import { Formik, Field, Form, ErrorMessage,  } from "formik";
 import React from "react";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { useMaps } from "../../context/MapContext";
+/* import { useMaps } from "../../context/MapContext"; */
 
 export const RegisterForm = () => {
-  const { RegisterUser } = useMaps();
+/*   const { RegisterUser } = useMaps(); */
   const data = {
     email: "",
     password: "",
