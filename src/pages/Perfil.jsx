@@ -1,4 +1,9 @@
 import React from "react";
+import { Row } from "react-bootstrap";
+import { Form } from "react-bootstrap";
+import { ProgressBar } from "react-bootstrap";
+import { Col } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { Button, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
@@ -106,7 +111,7 @@ export const Perfil = () => {
             </Row>
           </Form>
           <div className='text-center'>
-            <Button onclick={handleSubmit}>Completado!</Button>
+            <Button /* onclick={handleSubmit} */>Completado!</Button>
           </div>
         </Card.Body>
 

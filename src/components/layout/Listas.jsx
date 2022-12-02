@@ -7,7 +7,6 @@ const Listas = () => {
         <li>Mapas de temperatura</li>
         <li>Mapas de humedad</li>
         <li>Mapas de densidad forestal</li>
-        <li>Mapas de precipitaciones anual aproximada, etc...</li>
       </ul>
     </>
   );

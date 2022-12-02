@@ -1,11 +1,13 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@fortawesome/fontawesome-free': ^6.2.1
   '@fortawesome/fontawesome-svg-core': ^6.2.0
   '@fortawesome/react-fontawesome': ^0.2.0
   '@types/react': ^18.0.25
   '@types/react-dom': ^18.0.9
   '@vitejs/plugin-react': ^2.2.0
+  animate.css: ^4.1.1
   axios: ^1.1.3
   bootstrap: ^5.2.2
   formik: ^2.2.9
@@ -28,8 +30,10 @@ specifiers:
   yup: ^0.32.11
 
 dependencies:
+  '@fortawesome/fontawesome-free': 6.2.1
   '@fortawesome/fontawesome-svg-core': 6.2.0
   '@fortawesome/react-fontawesome': 0.2.0_f27561c2ee63c5e609ca3dd4f23f4685
+  animate.css: 4.1.1
   axios: 1.1.3
   bootstrap: 5.2.2
   formik: 2.2.9_react@18.2.0
@@ -356,6 +360,12 @@ packages:
     requiresBuild: true
     dev: false
 
+  /@fortawesome/fontawesome-free/6.2.1:
+    resolution: {integrity: sha512-viouXhegu/TjkvYQoiRZK3aax69dGXxgEjpvZW81wIJdxm5Fnvp3VVIP4VHKqX4SvFw6qpmkILkD4RJWAdrt7A==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dev: false
+
   /@fortawesome/fontawesome-svg-core/6.2.0:
     resolution: {integrity: sha512-Cf2mAAeMWFMzpLC7Y9H1I4o3wEU+XovVJhTiNG8ZNgSQj53yl7OCJaS80K4YjrABWZzbAHVaoHE1dVJ27AAYXw==}
     engines: {node: '>=6'}
@@ -533,6 +543,10 @@ packages:
       kind-of: 3.2.2
       longest: 1.0.1
       repeat-string: 1.6.1
+    dev: false
+
+  /animate.css/4.1.1:
+    resolution: {integrity: sha512-+mRmCTv6SbCmtYJCN4faJMNFVNN5EuCTTprDTAo7YzIGji2KADmakjVA3+8mVDkZ2Bf09vayB35lSQIex2+QaQ==}
     dev: false
 
   /ansi-styles/3.2.1:
