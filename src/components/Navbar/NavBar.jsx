@@ -7,13 +7,16 @@ import { NavNoLogged } from "./NavNoLogged";
 import { Link } from "react-router-dom";
 import CurrentWeather from "./currentWeather";
 import Logo from "../assets/Logo.png";  
+import { useDispatch, useSelector } from "react-redux";
 
 
 export default function NavBar() {
  /*  const { login } = useMaps(); */
- const login = true
+ const { isLoggedIn } = useSelector((state) => state.auth);
+/*  const login = false */
   const [style,setStyle] = useState({});
 
+  console.log(isLoggedIn)
 
   const userAgent = typeof navigator === 'undefined' ? 'SSR' : navigator.userAgent;
   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
@@ -24,7 +27,7 @@ export default function NavBar() {
 
 useEffect(() => {
   const tamanio = window.innerWidth
-  console.log(tamanio)
+
 
   if(tamanio<800){ 
     setStyle({ 
@@ -60,7 +63,7 @@ useEffect(() => {
    
       
       </Row>
-        {login ? <NavLogged /> : <NavNoLogged />}
+        {isLoggedIn ? <NavLogged /> : <NavNoLogged />}
       </Navbar>
     </>
   );

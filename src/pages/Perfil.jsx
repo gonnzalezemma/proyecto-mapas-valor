@@ -117,7 +117,7 @@ export const Perfil = () => {
             </Row>
           </Form>
           <div className='text-center'>
-            <Button onclick={handleSubmit}>Completado!</Button>
+            <Button onClick={handleSubmit}>Completado!</Button>
           </div>
         </Card.Body>
 

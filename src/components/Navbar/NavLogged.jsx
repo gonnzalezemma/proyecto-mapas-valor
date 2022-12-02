@@ -3,9 +3,13 @@ import { Button, Form, InputGroup, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 /* import { useMaps } from "../../context/MapContext"; */
 import { FaSearch } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../slices/auth";
 
 export const NavLogged = () => {
 /*   const { login, setLogin } = useMaps(); */
+const { isLoggedIn } = useSelector((state) => state.auth);
+const dispatch = useDispatch();
 
   return (
     <>
@@ -44,7 +48,7 @@ export const NavLogged = () => {
             Noticias
           </NavDropdown.Item>
           <NavDropdown.Divider color='white' />
-          <NavDropdown.Item as={Link} to='/' onClick={() => setLogin(!login)}>
+          <NavDropdown.Item as={Link} to='/'onClick={()=>dispatch(logout())}>
             Cerrar sesion
           </NavDropdown.Item>
         </NavDropdown>

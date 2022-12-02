@@ -39,8 +39,7 @@ export default function Routing() {
 
           <Route path='departametos-temperatura-tierra' element={<TemperaturaTierra />} />
           
-       {/*    <Route path='provincia-formosa' element={<ProvinciaFormosa />} />
- */}
+     
 
       </Route >
       <Route path='/gestion'>

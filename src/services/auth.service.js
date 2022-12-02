@@ -1,11 +1,11 @@
 import axios from "axios";
 
 
-const API_URL = "";
+const API_URL = "http://localhost:3000";
 
 const register = (email, password)=>{
 
-return axios.post(API_URL,{
+return axios.post(API_URL+"/usuarios/create-user",{
     email,
     password
 });
@@ -15,14 +15,14 @@ return axios.post(API_URL,{
 };
 
 const login = (email, password)=>{
-    return axios.post(API_URL,{
+    return axios.post(API_URL+"/login/usuarios",{
         email,
         password,
     })
     .then((response)=>{
-        if(response.data.accessToken){
+        if(response.data.token){
             
-            localStorage.setItem("user", JSON.stringify(response.data.accessToken));
+            localStorage.setItem("user", JSON.stringify(response.data.token));
 
             return response.data.token;
         }
