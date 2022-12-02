@@ -1,9 +1,9 @@
 import "leaflet/dist/leaflet.css";
 import "leaflet-draw/dist/leaflet.draw.css";
-import { useState } from "react";
 import { FeatureGroup } from "react-leaflet";
 import { EditControl } from "react-leaflet-draw";
 import { useMaps } from "../../context/MapContext";
+import { latLng } from "leaflet";
 
 export const MapDraw = () => {
   const { mapLayers, setMapLayers } = useMaps();
@@ -14,7 +14,7 @@ export const MapDraw = () => {
     const { layerType, layer } = e;
     if (layerType === "polygon") {
       const { _leaflet_id } = layer;
-
+      console.log(layer.getLatLngs());
       setMapLayers((layers) => [...layers, { id: _leaflet_id }]);
     }
   };

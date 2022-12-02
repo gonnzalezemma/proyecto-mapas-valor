@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.background-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../components/assets/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-attachment: fixed;
+  color: white;
+}

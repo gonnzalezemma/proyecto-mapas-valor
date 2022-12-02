@@ -12,6 +12,7 @@ export const NavNoLogged = () => {
           <Button
             as={Link}
             to='/login'
+            onClick={() => setLogin(!login)}
             className='mx-2'
             variant='success'
           >

@@ -66,7 +66,6 @@ import "leaflet-regular-grid-cluster";
 import "leaflet-easybutton";
 import "leaflet-draw";
 
-
 const purpleOptions = { color: "purple", fillOpacity: 0 };
 
 export function PointMap() {
@@ -119,40 +118,34 @@ export function PointMap() {
     }
   );
 
-  const mapStyles = {
-    
-  };
+  const mapStyles = {};
 
   // Options for our map instance:
   const mapParams = {
-    center: [-26.176143991875357, -58.202510798884646], 
+    center: [-26.176143991875357, -58.202510798884646],
     zoom: 30,
     zoomControl: true,
     zoomSnap: 0.75,
     maxBounds: L.latLngBounds(L.latLng(-150, -240), L.latLng(150, 240)),
     closePopupOnClick: false,
-    layers: [tileRef.current], 
+    layers: [tileRef.current],
   };
 
   // Map creation:
   useEffect(() => {
     mapRef.current = L.map("map", mapParams);
 
-
     // Set map instance to state:
     setMapInstance(mapRef.current);
   }, []);
 
-  
   useEffect(() => {
-    
     if (!mapInstance) return;
     if (mapInstance) {
-
       var stateChangingButton = L.easyButton({
         states: [
           {
-            stateName: "agregar-point", 
+            stateName: "agregar-point",
             icon: '<ion-icon name="golf-outline"></ion-icon>', // and define its properties
             title: "create click", // like its title
             onClick: function (btn, map) {
@@ -211,52 +204,49 @@ export function PointMap() {
             title: "ubicacion button", // like its title
             onClick: function (btn, map) {
               // and its callback
-              
+
               var pointPosition, radioPosition;
-             
+
               function onLocationFound(e) {
                 // if position defined, then remove the existing position marker and accuracy circle from the map
                 if (pointPosition) {
-                    map.removeLayer(pointPosition);
-                    map.removeLayer(radioPosition);
+                  map.removeLayer(pointPosition);
+                  map.removeLayer(radioPosition);
                 }
-          
+
                 var radius = e.accuracy / 2;
 
                 pointPosition = L.circle(e.latlng, 3, {
-                  name:"point-ubication",
-                    weight: 2,
-                    color: 'white',
-                    fillColor: 'blue',
-                    fillOpacity: 1
-                }).addTo(map)
-          
-                radioPosition = L.circle(e.latlng, radius,{
-                  name:"radius-ubication",
+                  name: "point-ubication",
+                  weight: 2,
+                  color: "white",
+                  fillColor: "blue",
+                  fillOpacity: 1,
+                }).addTo(map);
+
+                radioPosition = L.circle(e.latlng, radius, {
+                  name: "radius-ubication",
                   weight: 1,
-                  fillColor: '#00aae4',
-                  fillOpacity: 0.1
+                  fillColor: "#00aae4",
+                  fillOpacity: 0.1,
                 }).addTo(map);
               }
               function onLocationError(e) {
                 console.log(e);
               }
 
-               map.on('locationfound', onLocationFound);
-               map.on('locationerror', onLocationError);
-                function locate() {
-                  map.locate({setView: true,})
-                }
-      
-              locate()
+              map.on("locationfound", onLocationFound);
+              map.on("locationerror", onLocationError);
+              function locate() {
+                map.locate({ setView: true });
+              }
 
-           
+              locate();
 
-   
-      btn.state("deshabilitar-ubicacion");
+              btn.state("deshabilitar-ubicacion");
             },
-
-          },{
+          },
+          {
             stateName: "deshabilitar-ubicacion", // name the state
             icon: '<ion-icon name="arrow-back-circle-outline"></ion-icon>', // and define its properties
             title: "modal button", // like its title
@@ -268,17 +258,15 @@ export function PointMap() {
                 if (layer.options.name == "radius-ubication") {
                   map.removeLayer(layer);
                 }
-
               });
-              map.stopLocate() 
-           
-           
+              map.stopLocate();
+
               btn.state("habilitar-ubicacion");
-            }
-          }
+            },
+          },
         ],
       });
-      const button= L.easyButton({
+      const button = L.easyButton({
         states: [
           {
             stateName: "abrir-modal-position", // name the state
@@ -286,27 +274,20 @@ export function PointMap() {
             title: "modal button", // like its title
             onClick: function (btn, map) {
               // and its callback
-           
-                map.eachLayer(function (layer) {
-                  if (layer.options.name == "point-ubication") {
-                
-                    
+
+              map.eachLayer(function (layer) {
+                if (layer.options.name == "point-ubication") {
                   setLatitudPunto(layer._latlng.lat);
                   setLongitudPunto(layer._latlng.lng);
-
-                  
-                   
-
-
-                  }
-                });
+                }
+              });
               handleShow();
 
               // change state on click!
             },
           },
         ],
-      })
+      });
       buttonUbication.addTo(mapInstance);
       button.addTo(mapInstance);
     }
@@ -314,9 +295,6 @@ export function PointMap() {
 
   // Toggle marker on button click:
   const handleClick = (value, latitud, longitud) => {
-   
- 
- 
     const valorOptimo = 100;
 
     const porcentajeValue = value / valorOptimo;
@@ -353,8 +331,7 @@ export function PointMap() {
     markerRef.current
       .bindPopup(`<b style="color: ${color}">${label}</b><br>Valor: ${value}`)
       .openPopup();
-  
-  
+
     handleClose();
     setLatitudPunto("");
     setLongitudPunto("");
@@ -368,47 +345,54 @@ export function PointMap() {
         </Modal.Header>
         <Modal.Body>Agregue los datos de su parcela</Modal.Body>
         <Form>
-          <Form.Group className="mb-3" controlId="form cordenada-longitud">
+          <Form.Group className='mb-3' controlId='form cordenada-longitud'>
             <Form.Label>Latitud</Form.Label>
             <Form.Control
-              type="text"
-              placeholder="Ingresar Longitud"
+              type='text'
+              placeholder='Ingresar Longitud'
               ref={inputLatitud}
               defaultValue={latitudPunto}
             />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="form cordenada-latitud">
+          <Form.Group className='mb-3' controlId='form cordenada-latitud'>
             <Form.Label>Longitud</Form.Label>
             <Form.Control
-              type="text"
-              placeholder="Ingresar Longitud"
+              type='text'
+              placeholder='Ingresar Longitud'
               ref={inputLongitud}
               defaultValue={longitudPunto}
             />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="form cordenada-y">
+          <Form.Group className='mb-3' controlId='form cordenada-y'>
             <Form.Label>Valor</Form.Label>
             <Form.Control
-              type="text"
-              placeholder="Ingresa valor"
+              type='text'
+              placeholder='Ingresa valor'
               ref={inputValor}
             />
           </Form.Group>
         </Form>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant='secondary' onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={() => handleEnviar()}>
+          <Button variant='primary' onClick={() => handleEnviar()}>
             Enviar
           </Button>
         </Modal.Footer>
       </Modal>
 
-      <div id="map" style={{border: "none", display:"inline-table", height:"85vh", width:"100%"}} />
-   
+      <div
+        id='map'
+        style={{
+          border: "none",
+          display: "inline-table",
+          height: "85vh",
+          width: "100%",
+        }}
+      />
     </>
   );
 }

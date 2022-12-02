@@ -1,4 +1,4 @@
-import { MDBSpinner } from "mdb-react-ui-kit";
+// import { MDBSpinner } from "mdb-react-ui-kit";
 import React from "react";
 
 export const Loading = () => {

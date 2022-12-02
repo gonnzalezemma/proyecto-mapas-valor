@@ -7,9 +7,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../slices/auth";
 
 export const NavLogged = () => {
-/*   const { login, setLogin } = useMaps(); */
+
 const { isLoggedIn } = useSelector((state) => state.auth);
 const dispatch = useDispatch();
+
 
   return (
     <>
@@ -49,9 +50,13 @@ const dispatch = useDispatch();
           </NavDropdown.Item>
           <NavDropdown.Divider color='white' />
           <NavDropdown.Item as={Link} to='/'onClick={()=>dispatch(logout())}>
+
             Cerrar sesion
           </NavDropdown.Item>
-        </NavDropdown>
+          {/* <NavDropdown.Item as={Link} to='/' onClick={() => setLogin(!login)}>
+          Cerrar sesion
+        </NavDropdown.Item> */}
+      </NavDropdown>
       </div>
       </Navbar.Collapse>
     </>

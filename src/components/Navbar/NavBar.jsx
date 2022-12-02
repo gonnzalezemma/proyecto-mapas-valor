@@ -9,7 +9,6 @@ import CurrentWeather from "./currentWeather";
 import Logo from "../assets/Logo.png";  
 import { useDispatch, useSelector } from "react-redux";
 
-
 export default function NavBar() {
  /*  const { login } = useMaps(); */
  const { isLoggedIn } = useSelector((state) => state.auth);
@@ -29,19 +28,21 @@ useEffect(() => {
   const tamanio = window.innerWidth
 
 
-  if(tamanio<800){ 
-    setStyle({ 
-      paddingLeft: "50px",paddingTop: "-5px",marginTop: "-2px"
-    })}
-    
-    
-    else{
+    if (tamanio < 800) {
       setStyle({
-        paddingLeft: "550px",paddingTop: "-50px",marginTop: "-62px"
-      })
+        paddingLeft: "50px",
+        paddingTop: "-5px",
+        marginTop: "-2px",
+      });
+    } else {
+      setStyle({
+        paddingLeft: "550px",
+        paddingTop: "-50px",
+        marginTop: "-62px",
+      });
     }
-},[window.innerWidth])
-  
+  }, [window.innerWidth]);
+
   return (
     <>
       <Navbar style={{ backgroundColor: "#024554", display:"flex", flexDirection:"row", justifyContent:"center", justifyItems:"center", padding:"20px 20px 0px 5px"}} variant="dark">
@@ -63,7 +64,7 @@ useEffect(() => {
    
       
       </Row>
-        {isLoggedIn ? <NavLogged /> : <NavNoLogged />}
+        {login ? <NavLogged /> : <NavNoLogged />}
       </Navbar>
     </>
   );
