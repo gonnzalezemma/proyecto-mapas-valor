@@ -3,7 +3,7 @@ import Home from "../pages/Home";
 import { NotFound } from "../pages/NotFound";
 import { Login } from "../pages/Login";
 import { Register } from "../pages/Register";
-import { Perfil } from "../pages/Perfil";
+/* import { Perfil } from "../pages/Perfil"; */
 import GestionCampos from "../pages/GestionCampos";
 import Mapstore from "../pages/Mapstore";
 import { HumedadSuelo } from "../components/mapstore/HumedadSuelo";
@@ -12,7 +12,7 @@ import { TemperaturaTierra } from "../components/mapstore/TemperaturaTierra";
 import CrearParcelaCampo from "../components/gestion/CrearParcelaCampo";
 import { PointMap } from "../components/gestion/PointMap";
 import News from "../pages/news";
-import { ProfileForm } from "../components/forms/ProfileForm";
+import { ProfileForm}  from "../pages/Perfil";
 import SeccionParcelas from "../pages/secciones/SeccionParcelas";
 import SeccionRegistro from "../pages/secciones/SeccionRegistro";
 import SeccionTipodatos from "../pages/secciones/SeccionTipodatos";
@@ -24,7 +24,7 @@ export default function Routing() {
       <Route path='register' element={<Register />} />
       <Route path='login' element={<Login />} />
       <Route path='*' element={<NotFound />} />
-      <Route path='perfil' element={<Perfil />} />
+      <Route path='perfil' element={<ProfileForm />} />
       <Route path='news' element={<News />} />
 
       <Route   path='/maps' >
